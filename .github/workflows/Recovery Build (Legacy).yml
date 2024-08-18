@@ -148,7 +148,7 @@ jobs:
         mkdir out/target
         mkdir out/target/product
         mkdir out/target/product/a2corelte
-        cp prebuilt/dt.img out/target/product/a2corelte/dt.img
+        cp device/samsung/a2corelte/prebuilt/dt.img out/target/product/a2corelte/dt.img
         source build/envsetup.sh
         export ALLOW_MISSING_DEPENDENCIES=true
         lunch ${{ github.event.inputs.MAKEFILE_NAME }}-eng && make clean && make ${{ github.event.inputs.BUILD_TARGET }}image -j$(nproc --all)
